@@ -1,0 +1,670 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en-US"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en-US"> <![endif]-->
+<!--[if gte IE 8]><html class="ie ie8" lang="en-US"> <![endif]-->
+
+<html dir="ltr" lang="en-US">
+
+    
+<!-- Mirrored from idealautos.com.ng/requests by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 12 Aug 2022 18:13:06 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <base />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="shortcut icon" href="{% static 'idealapp/img/favicon.ico' %}" type="image/x-icon">
+        <link rel="icon" href="{% static 'idealapp/img/favicon.ico' %}" type="image/x-icon">
+        <script type="text/javascript">
+            var base_url = 'index.html';
+            var site_url = 'index.html';
+        </script>
+        <!-- Google Fonts
+        ============================================= -->
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,900,700,300' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+        <!-- Stylesheets
+        ============================================= -->
+        <link rel="stylesheet" href="{% static 'idealapp/css/plugin.css' %}" type="text/css" />
+        <link rel="stylesheet" href="{% static 'idealapp/css/style.css' %}" type="text/css" />
+        <link rel="stylesheet" href="{% static 'idealapp/css/responsive.css' %}" type="text/css" />
+
+        <!-- JavaScripts
+        ============================================= -->
+        <script type="text/javascript" src="{% static 'idealapp/js/jquery.js' %}"></script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+        <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <title>Ideal Autos| Requests</title>
+
+        <script src="../ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!--        <script type="text/javascript">-->
+<!--            $(document).ready(function(){-->
+<!--                $("#submit").click(function(){-->
+<!--                    var name = $("#rates-source").val();-->
+<!--                    var email = $("#rates-destination").val();-->
+<!--                    var password = $("#rates-weight").val();-->
+<!--                    var base_url = '--><!--';-->
+<!--                    // Returns successful data submission message when the entered information is stored in database.-->
+<!--                    var dataString = 'name1='+ name + '&email1='+ email + '&password1='+ password;-->
+<!--                    if(name==''||email==''||password=='')-->
+<!--                    {-->
+<!--                        alert("Please Fill All Fields");-->
+<!--                    }-->
+<!--                    else-->
+<!--                    {-->
+<!--                        // AJAX Code To Submit Form.-->
+<!--                        $.ajax({-->
+<!--                            type: "POST",-->
+<!--                            url: base_url + "home/process_rates",-->
+<!--                            data: dataString,-->
+<!--                            cache: false,-->
+<!--                            success: function(result){-->
+<!--                                alert(result);-->
+<!--                            }-->
+<!--                        });-->
+<!--                    }-->
+<!--                    return false;-->
+<!--                });-->
+<!--            });-->
+<!--        </script>-->
+    </head>
+
+    <body >
+        <!--<div id="preloader">
+            <div id="status">
+                <img src="{% static 'idealapp/img/logo.png' %}" alt="" />
+            </div>
+        </div>-->
+
+        <!-- MAIN WRAPPER
+        ============================================= -->
+        <div id="main-wrapper" class="clearfix">
+
+            <!-- HEADER
+            ============================================= -->
+            <header id="header" class="clearfix">
+                <div class="site-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="top-header clearfix">
+                                <div class="logo col-md-4">
+                                    <a href="{% url 'ideal_app:index' %}">
+                                        <img src="{% static 'idealapp/img/logo.jpg' %}" alt="" />
+                                    </a>
+                                </div>
+
+                                <div class="info col-md-8">
+                                    <ul>
+                                        <li>
+                                            <i class="fa fa-clock-o"></i>
+                                            <p>
+                                                <span class="heading">Opening Hours</span>
+                                                <span>Mon-Sun: 9am-5pm</span>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-phone"></i>
+                                            <p>
+                                                <span class="heading">Call Us</span>
+                                                <span>+2348066982178</span>
+                                            </p>
+                                        </li>
+                                        <li class="last">
+                                            <i class="fa fa-envelope"></i>
+                                            <p>
+                                                <span class="heading">Email Us</span>
+                                                <span>info@idealautos.com.ng</span>
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="navigation">
+                                <div class="main-menu">
+                                    <ul class="menu">
+                                        <li><a href="{% url 'ideal_app:index'%}">Home</a>
+                                        	<!--<ul>
+                                        		<li><a href="index">Header Style 1</a></li>
+                                        		<li><a href="index5">Header Style 2</a></li>
+                                        	</ul>-->
+                                        </li>
+                                        <li><a href="{% url 'ideal_app:requests' %}">Schedule Request</a></li>
+                                        <!--<li class="has-sub"><a href="services">Services</a>
+                                            <ul>
+                                               <li><a href="single-services">Overland Network</a></li>
+                                               <li><a href="single-services">Ocean Netwok</a></li>
+                                               <li><a href="single-services">Air Freight</a></li>
+                                               <li><a href="single-services">Cargo</a></li>
+                                               <li><a href="single-services">Storage</a></li>
+                                               <li class="last"><a href="single-services">Warehousing</a></li>
+                                            </ul>
+                                        </li>-->
+                                        <li><a href="{% url 'ideal_app:payments' %}">Payments</a></li>
+                                        <li><a href="{% url 'ideal_app:rates'}">Rates</a></li>
+                                        <li><a href="{% url 'ideal_app:contact' %}">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Menu Mobile
+                ============================================= -->
+                <nav id="c-menu--slide-right" class="c-menu c-menu--slide-right">
+                    <button class="c-menu__close icon icon-close"></button>
+
+                    <div class="search-input">
+<!--                        <input type="text" name="s" placeholder="Type some text in here..." class="untouched">-->
+<!--                        <button><i class="fa fa-search"></i></button>-->
+                    </div>
+
+                    <ul class="slide-menu-items">
+                        <li><a href="{% url 'ideal_app:index' %}">Home</a>
+                        	<!--<ul>
+                        		<li><a href="index">Header Style 1</a></li>
+                        		<li><a href="index5">Header Style 2</a></li>
+                        	</ul>-->
+                        </li>
+                        <li><a href="{% url 'ideal_app:requests' %}">Schedule Request</a></li>
+                       <!-- <li class="has-sub"><a href="services">Services</a>
+                            <ul>
+                               <li><a href="single-services">Overland Network</a></li>
+                               <li><a href="single-services">Ocean Netwok</a></li>
+                               <li><a href="single-services">Air Freight</a></li>
+                               <li><a href="single-services">Cargo</a></li>
+                               <li><a href="single-services">Storage</a></li>
+                               <li><a href="single-services">Warehousing</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="rates">Rates</a></li>-->
+                        <li><a href="{% url 'ideal_app:payments' %}">Payments</a></li>
+                        <li><a href="{% url 'ideal_app:rates' %}">Rates</a></li>
+                        <li><a href="{% url 'ideal_app:contact' %}">Contact</a></li>
+                    </ul>
+
+                    <div class="info">
+                        <ul>
+                            <li>
+                                <p>
+                                    <span class="heading">Opening Hours</span>
+                                    <span>Mon-Sun: 9am-5pm</span>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <span class="heading">Call Us</span>
+                                    <span>+2348066982178</span>
+                                </p>
+                            </li>
+                            <li class="last">
+                                <p>
+                                    <span class="heading">Email Us</span>
+                                    <span>info@idealautos.com.ng</span>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <div id="slide-overlay" class="slide-overlay"></div>
+                <!-- Menu Mobile End -->
+            </header>
+            <!-- HEADER END -->
+<!-- PAGE TITLE START
+============================================= -->
+<section class="page-title wrapper clearfix" style="background-image: url({% static 'idealapp/img/about-page-bg.jpg' %});">
+    <div class="container">
+        <div class="row">
+            <div class="title-wrap wow fadeIn" data-wow-delay="1s">
+                <h1>Schedule Request</h1>
+                <div class="breadcrumbs">
+                    <p>You Are Here :
+                        <span><a href="{% url 'ideal_app:index' %}">Home</a></span>
+                        <span class="arrow"><i class="icon icon-arrow-right"></i></span>
+                        <span>Requests</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- PAGE TITLE END -->
+
+<!-- CONTENT START
+============================================= -->
+<section id="content" class="clearfix">
+    <!-- SINGLE SERVICES START
+    ============================================= -->
+    <div class="contact-page wrapper bg-color">
+        <div class="container">
+            <div class="row">
+                <div class="contact-wrap row">
+                    <div class="contact-details col-md-4">
+                        <div class="address wow fadeInLeft" data-wow-delay="0.3s">
+                            <h4 class="title">Our Office Address</h4>
+                            <p>No. 1b, Stella Close,</p>
+                            <p>Iyana-Paja, Lagos.</p>
+                            <p>Tel. : +2348066982178 <br>+2347088662929</p>
+                            <p>Email : info@idealautos.com.ng</p>
+                        </div>
+                        <!--<div class="hours wow fadeInLeft" data-wow-delay="0.6s">
+                            <h4 class="title">Our Office Hours</h4>
+                            <p>Monday : <span>08.00 - 16.00</span></p>
+                            <p>Tuesday : <span>08.00 - 16.00</span></p>
+                            <p>Wednesday : <span>08.00 - 16.00</span></p>
+                            <p>Thursday : <span>08.00 - 16.00</span></p>
+                            <p>Sunday : <span>08.00 - 16.00</span></p>
+                            <p>Saturday : <span>08.00 - 16.00</span></p>
+                        </div>-->
+                    </div>
+
+                    <div class="contact-form col-md-8">
+
+                        <div class="title"><h3>Schedule Pickup</h3><span class="titledownarrow"></span></div>
+                                                <form action="https://idealautos.com.ng/requests" class="row" method="post" accept-charset="utf-8">
+                        <div class="name col-md-6">
+                            <label> Name</label>
+                            
+                            <input type="text" name="pickName" value=""  required />
+<br/>
+                        </div>
+                        <div class="name col-md-6">
+                            <label>Address</label>
+                                                        <input type="text" name="pickupAdd" value=""  required />
+                        </div>
+                        <div class="name col-md-6">
+                            <label> State</label>
+                                                        <select class="select" name="pickupState">
+                                                                    <option value="Abia"
+                                        >
+                                        Abia</option>
+                                                                    <option value="Abuja"
+                                        >
+                                        Abuja</option>
+                                                                    <option value="Adamawa"
+                                        >
+                                        Adamawa</option>
+                                                                    <option value="Akwa Ibom"
+                                        >
+                                        Akwa Ibom</option>
+                                                                    <option value="Anambra"
+                                        >
+                                        Anambra</option>
+                                                                    <option value="Bauchi"
+                                        >
+                                        Bauchi</option>
+                                                                    <option value="Bayelsa"
+                                        >
+                                        Bayelsa</option>
+                                                                    <option value="Benue"
+                                        >
+                                        Benue</option>
+                                                                    <option value="Borno"
+                                        >
+                                        Borno</option>
+                                                                    <option value="Cross River"
+                                        >
+                                        Cross River</option>
+                                                                    <option value="Delta"
+                                        >
+                                        Delta</option>
+                                                                    <option value="Ebonyi"
+                                        >
+                                        Ebonyi</option>
+                                                                    <option value="Edo"
+                                        >
+                                        Edo</option>
+                                                                    <option value="Ekiti"
+                                        >
+                                        Ekiti</option>
+                                                                    <option value="Enugu"
+                                        >
+                                        Enugu</option>
+                                                                    <option value="Gombe"
+                                        >
+                                        Gombe</option>
+                                                                    <option value="Imo"
+                                        >
+                                        Imo</option>
+                                                                    <option value="Jigawa"
+                                        >
+                                        Jigawa</option>
+                                                                    <option value="Kaduna"
+                                        >
+                                        Kaduna</option>
+                                                                    <option value="Kano"
+                                        >
+                                        Kano</option>
+                                                                    <option value="Katsina"
+                                        >
+                                        Katsina</option>
+                                                                    <option value="Kebbi"
+                                        >
+                                        Kebbi</option>
+                                                                    <option value="Kogi"
+                                        >
+                                        Kogi</option>
+                                                                    <option value="Kwara"
+                                        >
+                                        Kwara</option>
+                                                                    <option value="Lagos"
+                                        >
+                                        Lagos</option>
+                                                                    <option value="Nasarawa"
+                                        >
+                                        Nasarawa</option>
+                                                                    <option value="Niger"
+                                        >
+                                        Niger</option>
+                                                                    <option value="Ogun"
+                                        >
+                                        Ogun</option>
+                                                                    <option value="Ondo"
+                                        >
+                                        Ondo</option>
+                                                                    <option value="Osun"
+                                        >
+                                        Osun</option>
+                                                                    <option value="Oyo"
+                                        >
+                                        Oyo</option>
+                                                                    <option value="Plateau"
+                                        >
+                                        Plateau</option>
+                                                                    <option value="Rivers"
+                                        >
+                                        Rivers</option>
+                                                                    <option value="Sokoto"
+                                        >
+                                        Sokoto</option>
+                                                                    <option value="Taraba"
+                                        >
+                                        Taraba</option>
+                                                                    <option value="Yobe"
+                                        >
+                                        Yobe</option>
+                                                                    <option value="Zamfara"
+                                        >
+                                        Zamfara</option>
+                                                            </select>
+                        </div>
+                        <div class="name col-md-6">
+                            <label>Contact Number</label>
+                            
+                            <input type="text" name="pickupContNo" value=""  required />
+                        </div>
+
+
+                        <div class="name col-md-6">
+                            <label>Pickup Address:</label>
+                                                        <input type="text" name="DeliveryName" value=""  required />
+                        </div>
+
+                        <div class="name col-md-6">
+                            <label>Number of Days:</label>
+                                                        <input type="text" name="DeliveryAddress" value=""  required />
+                        </div>
+
+                        <div class="name col-md-6">
+                            <label>Delivery State</label>
+                                                        <select class="select" name="destinationState">
+                                                                    <option value="Abia"
+                                        >
+                                        Abia</option>
+                                                                    <option value="Abuja"
+                                        >
+                                        Abuja</option>
+                                                                    <option value="Adamawa"
+                                        >
+                                        Adamawa</option>
+                                                                    <option value="Akwa Ibom"
+                                        >
+                                        Akwa Ibom</option>
+                                                                    <option value="Anambra"
+                                        >
+                                        Anambra</option>
+                                                                    <option value="Bauchi"
+                                        >
+                                        Bauchi</option>
+                                                                    <option value="Bayelsa"
+                                        >
+                                        Bayelsa</option>
+                                                                    <option value="Benue"
+                                        >
+                                        Benue</option>
+                                                                    <option value="Borno"
+                                        >
+                                        Borno</option>
+                                                                    <option value="Cross River"
+                                        >
+                                        Cross River</option>
+                                                                    <option value="Delta"
+                                        >
+                                        Delta</option>
+                                                                    <option value="Ebonyi"
+                                        >
+                                        Ebonyi</option>
+                                                                    <option value="Edo"
+                                        >
+                                        Edo</option>
+                                                                    <option value="Ekiti"
+                                        >
+                                        Ekiti</option>
+                                                                    <option value="Enugu"
+                                        >
+                                        Enugu</option>
+                                                                    <option value="Gombe"
+                                        >
+                                        Gombe</option>
+                                                                    <option value="Imo"
+                                        >
+                                        Imo</option>
+                                                                    <option value="Jigawa"
+                                        >
+                                        Jigawa</option>
+                                                                    <option value="Kaduna"
+                                        >
+                                        Kaduna</option>
+                                                                    <option value="Kano"
+                                        >
+                                        Kano</option>
+                                                                    <option value="Katsina"
+                                        >
+                                        Katsina</option>
+                                                                    <option value="Kebbi"
+                                        >
+                                        Kebbi</option>
+                                                                    <option value="Kogi"
+                                        >
+                                        Kogi</option>
+                                                                    <option value="Kwara"
+                                        >
+                                        Kwara</option>
+                                                                    <option value="Lagos"
+                                        >
+                                        Lagos</option>
+                                                                    <option value="Nasarawa"
+                                        >
+                                        Nasarawa</option>
+                                                                    <option value="Niger"
+                                        >
+                                        Niger</option>
+                                                                    <option value="Ogun"
+                                        >
+                                        Ogun</option>
+                                                                    <option value="Ondo"
+                                        >
+                                        Ondo</option>
+                                                                    <option value="Osun"
+                                        >
+                                        Osun</option>
+                                                                    <option value="Oyo"
+                                        >
+                                        Oyo</option>
+                                                                    <option value="Plateau"
+                                        >
+                                        Plateau</option>
+                                                                    <option value="Rivers"
+                                        >
+                                        Rivers</option>
+                                                                    <option value="Sokoto"
+                                        >
+                                        Sokoto</option>
+                                                                    <option value="Taraba"
+                                        >
+                                        Taraba</option>
+                                                                    <option value="Yobe"
+                                        >
+                                        Yobe</option>
+                                                                    <option value="Zamfara"
+                                        >
+                                        Zamfara</option>
+                                                            </select>
+                        </div>
+                        <div class="name col-md-6">
+                            <label>Delivery Address:</label>
+                                                        <input type="text" name="delConNo" value=""  required />
+                        </div>
+                        <div class="name col-md-6">
+                            <label>Package Content:</label>
+                                                        <input type="text" name="pkgContent" value=""  required />
+                        </div>
+                        <div class="name col-md-6">
+                            <label>Weight of Package(In Kg):</label>
+                                                        <input type="text" name="weight" value=""  required />
+                        </div>
+
+                        <div class="col-md-12">
+                            <input type="submit" name="submit" value="Submit"  class="button-normal" />
+                        </div>
+                        </form>                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- CONTENT END --><!-- FOOTER START
+            ============================================= -->
+            <footer id="footer" class="wrapper clearfix">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer-wrap row">
+                            <!-- WIDGET FOOTER 1 START
+                            ============================================= -->
+                            <div class="widget-footer col-md-6">
+                                <div class="short-desc">
+                                    <div class="logo-footer">
+                                        <img src="{% static 'idealapp/img/logo-footer.jpg' %}" alt="">
+                                    </div>
+                                    <ul>
+                                        <li>Secure delivery service (Signature Upon Delivery)</li>
+                                        <li>Unbeatable rates</li>
+                                        <li>Door to door services</li>
+                                        <li>Tracking service available</li>
+                                        <li>Email confirmation of delivery report</li>
+                                        <li>Ship to all 36 states in Nigeria</li>
+                                        <li>We ship international packages to all Countries of the World</li>
+                                            <li>We can handle any weight or volumes</li>
+                                            <li>Saves your business money, time and worry</li>
+                                            <li>Insurance on high-value items</li>
+                                            <li>Choose US today!!!!</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- WIDGET FOOTER 1 END -->
+
+<!--                            <!-- WIDGET FOOTER 2 START-->
+<!--                            ============================================= -->
+<!--                            <div class="widget-footer col-md-3">-->
+<!--                                <div class="recent-post">-->
+<!--                                    <h4>&nbsp;</h4>-->
+<!--                                    <br/>-->
+<!--                                    <div class="footer-content">-->
+<!--                                        <ul>-->
+<!--                                            <li>We ship international packages to all Countries of the World</li>-->
+<!--                                            <li>We can handle any weight or volumes</li>-->
+<!--                                            <li>Saves your business money, time and worry</li>-->
+<!--                                            <li>Insurance on high-value items</li>-->
+<!--                                            <li>Choose US today!!!!</li>-->
+<!--                                        </ul>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <!-- WIDGET FOOTER 2 END -->
+
+                            <!-- WIDGET FOOTER 3 START
+                            ============================================= -->
+                            <div class="widget-footer col-md-3">
+                                <div class="contact-footer">
+                                    <h4 class="title">Contact Us</h4>
+                                    <div class="footer-content">
+                                        <div class="contact-section">
+                                            <h4>Our Office Address</h4>
+                                            <p>No. 1b, Stella Close,</p>
+                                            <p>Iyana-Paja, Lagos.</p>
+                                            <p>Tel. : +2348066982178 <br/> +2347088662929</p>
+                                            <p>Email : info@idealautos.com.ng</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- WIDGET FOOTER 3 END -->
+
+                            <!-- WIDGET FOOTER 4 START
+                            ============================================= -->
+                            <div class="widget-footer col-md-3">
+                                <div class="buy-now">
+                                    <h4 class="title">Download Our App</h4>
+                                    <div class="footer-content">
+                                        <p><a href="https://itunes.apple.com/sb/app/ab-logistics/id715872940?mt=8"><img src="{% static 'idealapp/img/applestore.png' %}" /></a></p>
+
+                                        <p><a href="https://play.google.com/store/apps/details?id=com.app_idealautos.layout"><img src="{% static 'idealapp/img/googleplay.png' %}" /></a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- WIDGET FOOTER 4 END -->
+                        </div>
+                    </div>
+                </div>
+                <!-- COPYRIGHT START
+                ============================================= -->
+                <div class="copyright text-center">
+                    <div class="container">
+                        <div class="social-icon">
+                            <ul>
+                                <li><a href="https://www.facebook.com/idealautosng" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://twitter.com/idealautosng" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://www.instagram.com/ideal_autos" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://wa.me/08066982178" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+                            
+                            </ul>
+                        </div>
+                        <p>Copyright &copy;  Ideal Autos2022. All Right Reserved | <a href="seo/sitemap" style="color: #FFF;">Sitemap</a> </p>
+                    </div>
+                </div>
+                <!-- COPYRIGHT END -->
+
+            </footer>
+            <!-- FOOTER END -->
+
+        </div>
+        <!-- MAIN WRAPPER END -->
+
+        <!-- Footer Scripts
+        ============================================= -->
+        <!-- External -->
+        <script type="text/javascript" src="js/plugin.js' %}"></script>
+        <script type="text/javascript" src="js/main.js' %}"></script>
+        <script type="text/javascript" src="js/formcalculations.js' %}"></script>
+    </body>
+
+<!-- Mirrored from idealautos.com.ng/requests by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 12 Aug 2022 18:13:07 GMT -->
+</html>
