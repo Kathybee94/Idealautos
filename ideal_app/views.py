@@ -17,7 +17,7 @@ def rates(request):
 
 def request_r(request):
     return render(request, 'ideal_app/requests.html', {'req':request_r})
-
+ 
 def contact(request):
     if request.method == 'POST':
         contact_form = ContactForm(request.Post)
